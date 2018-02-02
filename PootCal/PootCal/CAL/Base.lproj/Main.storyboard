@@ -120,25 +120,25 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn" userLabel="SelectedNotation">
+                                                            <rect key="frame" x="33" y="49.5" width="8" height="8"/>
+                                                            <color key="backgroundColor" red="0.45098039215686275" green="0.84705882352941175" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="8" id="2Oo-cT-Igk"/>
+                                                                <constraint firstAttribute="width" constant="8" id="TtB-Ko-LcT"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-Xf-drv">
                                                             <rect key="frame" x="16" y="27.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn" userLabel="SelectedNotation">
-                                                            <rect key="frame" x="35" y="50" width="4" height="4"/>
-                                                            <color key="backgroundColor" red="0.45098039215686275" green="0.84705882352941175" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="4" id="2Oo-cT-Igk"/>
-                                                                <constraint firstAttribute="width" constant="4" id="TtB-Ko-LcT"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="2"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
@@ -149,6 +149,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="UPG-Xf-drv" id="qAX-iX-uyv"/>
+                                                    <outlet property="selectedView" destination="9Mb-gt-MEn" id="00E-Lm-F1T"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -173,6 +174,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="v8g-mc-vam" id="PIz-6P-TK4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
