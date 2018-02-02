@@ -127,15 +127,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn" userLabel="SelectedNotation">
-                                                            <rect key="frame" x="34" y="50" width="6" height="6"/>
+                                                            <rect key="frame" x="35" y="50" width="4" height="4"/>
                                                             <color key="backgroundColor" red="0.45098039215686275" green="0.84705882352941175" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="6" id="2Oo-cT-Igk"/>
-                                                                <constraint firstAttribute="width" constant="6" id="TtB-Ko-LcT"/>
+                                                                <constraint firstAttribute="height" constant="4" id="2Oo-cT-Igk"/>
+                                                                <constraint firstAttribute="width" constant="4" id="TtB-Ko-LcT"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="3"/>
+                                                                    <integer key="value" value="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
