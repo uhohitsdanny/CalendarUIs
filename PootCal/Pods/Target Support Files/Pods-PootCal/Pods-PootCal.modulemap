@@ -1,0 +1,6 @@
+framework module Pods_PootCal {
+  umbrella header "Pods-PootCal-umbrella.h"
+
+  export *
+  module * { export * }
+}
