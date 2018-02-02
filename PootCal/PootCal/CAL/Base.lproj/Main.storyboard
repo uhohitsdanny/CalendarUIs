@@ -121,26 +121,30 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-Xf-drv">
-                                                            <rect key="frame" x="16" y="27" width="42" height="21"/>
+                                                            <rect key="frame" x="16" y="27.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn">
-                                                            <rect key="frame" x="30" y="50" width="14" height="14"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn" userLabel="SelectedNotation">
+                                                            <rect key="frame" x="34" y="50" width="6" height="6"/>
                                                             <color key="backgroundColor" red="0.45098039215686275" green="0.84705882352941175" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="6" id="2Oo-cT-Igk"/>
+                                                                <constraint firstAttribute="width" constant="6" id="TtB-Ko-LcT"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="10"/>
+                                                                    <integer key="value" value="3"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="9Mb-gt-MEn" firstAttribute="top" secondItem="UPG-Xf-drv" secondAttribute="bottom" constant="2" id="PBN-RY-RjY"/>
+                                                    <constraint firstItem="9Mb-gt-MEn" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="dRa-0E-NoN"/>
+                                                    <constraint firstItem="9Mb-gt-MEn" firstAttribute="top" secondItem="UPG-Xf-drv" secondAttribute="bottom" constant="2" id="oPL-3J-vph"/>
                                                     <constraint firstItem="UPG-Xf-drv" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="u6N-0s-QLM"/>
-                                                    <constraint firstItem="9Mb-gt-MEn" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="uCY-hv-6S4"/>
                                                     <constraint firstItem="UPG-Xf-drv" firstAttribute="centerY" secondItem="xn6-my-ReZ" secondAttribute="centerY" id="zqs-wH-5yZ"/>
                                                 </constraints>
                                                 <connections>
@@ -172,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="132.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>
