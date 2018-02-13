@@ -17,6 +17,17 @@ extension UIColor {
             return UIColor(rgb: 0x73D8EA, a: 1.0)
         }
     }
+    
+    struct NotificationColors {
+        // hex: 0xFFF652
+        static var pending: UIColor {
+            return UIColor(rgb: 0xFFF652, a: 1.0)
+        }
+        // hex: 0xFF630D
+        static var unavailable: UIColor {
+            return UIColor(rgb: 0xFF630D, a: 1.0)
+        }
+    }
 }
 
 
