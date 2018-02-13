@@ -123,6 +123,8 @@ extension Cal_VC {
             //highlight border
             validCell.contentView.layer.borderWidth = 1
             validCell.contentView.layer.borderColor = UIColor.PrimaryPootColor.OceanMist.cgColor
+        } else {
+            validCell.contentView.layer.borderWidth = 0
         }
         
     }
