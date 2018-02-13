@@ -126,42 +126,44 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mb-gt-MEn" userLabel="SelectedNotation">
-                                                            <rect key="frame" x="33" y="49.5" width="8" height="8"/>
+                                                            <rect key="frame" x="34" y="50" width="6" height="6"/>
                                                             <color key="backgroundColor" red="0.45098039215686275" green="0.84705882352941175" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="8" id="2Oo-cT-Igk"/>
-                                                                <constraint firstAttribute="width" constant="8" id="TtB-Ko-LcT"/>
+                                                                <constraint firstAttribute="height" constant="6" id="2Oo-cT-Igk"/>
+                                                                <constraint firstAttribute="width" constant="6" id="TtB-Ko-LcT"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="4"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-Wf-BTE" userLabel="StatusNotation">
-                                                            <rect key="frame" x="45" y="10" width="8" height="8"/>
-                                                            <color key="backgroundColor" red="1" green="0.96275351839273449" blue="0.32278076589849236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="8" id="LGA-P3-eHE"/>
-                                                                <constraint firstAttribute="height" constant="8" id="bWQ-8c-CjT"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="4"/>
+                                                                    <integer key="value" value="3"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-Xf-drv">
-                                                            <rect key="frame" x="16" y="27.5" width="42" height="20.5"/>
+                                                            <rect key="frame" x="16" y="27" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-Wf-BTE" userLabel="StatusNotation">
+                                                            <rect key="frame" x="34" y="20" width="6" height="6"/>
+                                                            <color key="backgroundColor" red="1" green="0.96275351839273449" blue="0.32278076589849236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="6" id="ZhK-1N-CIa"/>
+                                                                <constraint firstAttribute="height" constant="6" id="gCW-Nx-TK9"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
+                                                    <constraint firstItem="UPG-Xf-drv" firstAttribute="top" secondItem="3Qx-Wf-BTE" secondAttribute="bottom" constant="1" id="TGy-IC-Ny9"/>
                                                     <constraint firstItem="9Mb-gt-MEn" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="dRa-0E-NoN"/>
                                                     <constraint firstItem="9Mb-gt-MEn" firstAttribute="top" secondItem="UPG-Xf-drv" secondAttribute="bottom" constant="2" id="oPL-3J-vph"/>
+                                                    <constraint firstItem="3Qx-Wf-BTE" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="oTe-am-pYs"/>
                                                     <constraint firstItem="UPG-Xf-drv" firstAttribute="centerX" secondItem="xn6-my-ReZ" secondAttribute="centerX" id="u6N-0s-QLM"/>
                                                     <constraint firstItem="UPG-Xf-drv" firstAttribute="centerY" secondItem="xn6-my-ReZ" secondAttribute="centerY" id="zqs-wH-5yZ"/>
                                                 </constraints>
@@ -179,7 +181,11 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="v8g-mc-vam" secondAttribute="bottom" id="Ovm-Wa-xJr"/>
                                     <constraint firstAttribute="height" constant="353.5" id="ZQI-GS-efI"/>
+                                    <constraint firstAttribute="trailing" secondItem="v8g-mc-vam" secondAttribute="trailing" id="hAu-5e-r4G"/>
+                                    <constraint firstItem="v8g-mc-vam" firstAttribute="top" secondItem="jfT-Z4-SaK" secondAttribute="bottom" id="tfv-4X-Jb3"/>
+                                    <constraint firstItem="v8g-mc-vam" firstAttribute="leading" secondItem="mon-L5-hi3" secondAttribute="leading" id="weC-x3-2YN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -201,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
+            <point key="canvasLocation" x="133.59999999999999" y="130.88455772113943"/>
         </scene>
     </scenes>
 </document>
