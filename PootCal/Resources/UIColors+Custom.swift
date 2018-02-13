@@ -12,7 +12,11 @@ import UIKit
 extension UIColor {
     
     struct PrimaryPootColor {
-        let OceanMist = UIColor(red: 0x73, green: 0xD8, blue: 0xEA, alpha: 1)
+        // hex: 0x73D8EA
+        static var OceanMist: UIColor {
+            return UIColor(rgb: 0x73D8EA, a: 1.0)
+        }
     }
 }
+
 

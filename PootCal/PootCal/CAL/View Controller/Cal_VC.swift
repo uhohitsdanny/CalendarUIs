@@ -52,6 +52,7 @@ extension Cal_VC: JTAppleCalendarViewDelegate {
         cell.dateLabel.text = cellState.text
         setupCellNotations(cell: cell, cellState: cellState)
         handleCellTextColor(cell: cell, cellState: cellState)
+        handleCellCurrentDate(cell: cell, cellState: cellState)
         
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
         return cell
@@ -81,8 +82,9 @@ extension Cal_VC {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
         calendarView.allowsMultipleSelection = true
+        calendarView.scrollToDate(Date())
         
-        //set up labels
+        //Set up labels
         calendarView.visibleDates { (visibleDates) in
             self.setupMonthAndYear(from: visibleDates)
         }
@@ -100,10 +102,29 @@ extension Cal_VC {
     func setupCellNotations(cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? DateCell else {  return  }
         if cellState.isSelected {
+            
             validCell.selectedView.isHidden = false
+    
         } else {
+            
             validCell.selectedView.isHidden = true
+            
         }
+    }
+    
+    func handleCellCurrentDate(cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? DateCell else {  return  }
+        self.formatter.dateFormat = "yyyy MM dd"
+        
+        let todaysDateStr = formatter.string(from: Date())
+        let cellDateStr = formatter.string(from: cellState.date)
+
+        if todaysDateStr == cellDateStr {
+            //highlight border
+            validCell.contentView.layer.borderWidth = 1
+            validCell.contentView.layer.borderColor = UIColor.PrimaryPootColor.OceanMist.cgColor
+        }
+        
     }
     
     func handleCellTextColor(cell: JTAppleCell?, cellState: CellState) {

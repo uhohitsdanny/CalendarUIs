@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A9DE4F68084F3BAEEE01530 /* Pods_PootCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35345FA72307FD6264A9D2E /* Pods_PootCal.framework */; };
+		7CFB9BE82032994100BBD748 /* UIColors+inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB9BE72032994100BBD748 /* UIColors+inits.swift */; };
 		CE58D0E4201BBBC100C03246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0E3201BBBC100C03246 /* AppDelegate.swift */; };
 		CE58D0E6201BBBC100C03246 /* Cal_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0E5201BBBC100C03246 /* Cal_VC.swift */; };
 		CE58D0E9201BBBC200C03246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58D0E7201BBBC200C03246 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		6CA9AAD045F29490DF8CC187 /* Pods-PootCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PootCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PootCal/Pods-PootCal.debug.xcconfig"; sourceTree = "<group>"; };
+		7CFB9BE72032994100BBD748 /* UIColors+inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+inits.swift"; sourceTree = "<group>"; };
 		C02268CBE1F58BC3C0538730 /* Pods-PootCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PootCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-PootCal/Pods-PootCal.release.xcconfig"; sourceTree = "<group>"; };
 		CE58D0E0201BBBC100C03246 /* PootCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PootCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE58D0E3201BBBC100C03246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CE58D0EA201BBBC200C03246 /* Assets.xcassets */,
+				7CFB9BE72032994100BBD748 /* UIColors+inits.swift */,
 				CE58D0FA20228E8300C03246 /* UIColors+Custom.swift */,
 			);
 			path = Resources;
@@ -266,6 +269,7 @@
 				CE58D0E6201BBBC100C03246 /* Cal_VC.swift in Sources */,
 				CE58D0F6201BBF1000C03246 /* DateCell.swift in Sources */,
 				CE58D0FB20228E8300C03246 /* UIColors+Custom.swift in Sources */,
+				7CFB9BE82032994100BBD748 /* UIColors+inits.swift in Sources */,
 				CE58D0E4201BBBC100C03246 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
