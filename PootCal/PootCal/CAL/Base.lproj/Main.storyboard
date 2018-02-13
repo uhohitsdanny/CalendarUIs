@@ -138,6 +138,19 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-Wf-BTE" userLabel="StatusNotation">
+                                                            <rect key="frame" x="45" y="10" width="8" height="8"/>
+                                                            <color key="backgroundColor" red="1" green="0.96275351839273449" blue="0.32278076589849236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="8" id="LGA-P3-eHE"/>
+                                                                <constraint firstAttribute="height" constant="8" id="bWQ-8c-CjT"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-Xf-drv">
                                                             <rect key="frame" x="16" y="27.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -155,6 +168,7 @@
                                                 <connections>
                                                     <outlet property="dateLabel" destination="UPG-Xf-drv" id="qAX-iX-uyv"/>
                                                     <outlet property="selectedView" destination="9Mb-gt-MEn" id="00E-Lm-F1T"/>
+                                                    <outlet property="statusView" destination="3Qx-Wf-BTE" id="iJO-oo-N0o"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
