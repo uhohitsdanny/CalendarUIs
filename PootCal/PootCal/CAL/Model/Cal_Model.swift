@@ -7,9 +7,19 @@
 //
 
 import Foundation
-import UIKit
 
 class CalendarDates {
-    var datesSelected = [String]()
-    var datesPending = [String]()
+    
+    private var datesSelected: [String]?
+    private var datesPending: [String]?
+    
+    var datesToBeProcessed: [String]? {
+        get {
+            return datesSelected
+        }
+    }
+    
+    func saveSelectedDay(_ selectedday: String) {
+        datesSelected?.append(selectedday)
+    }
 }

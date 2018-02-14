@@ -10,12 +10,12 @@ import UIKit
 import JTAppleCalendar
 
 class Cal_VC: UIViewController {
+    
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     
-    let monthyearObj = Cal_View()
-    let calendarObj = CalendarDates()
+    private var calendarObj = CalendarDates()
     let formatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -107,8 +107,7 @@ extension Cal_VC {
         if cellState.isSelected && cellDateStr >= todaysDateStr {
             
             validCell.selectedView.isHidden = false
-            
-            self.calendarObj.datesSelected.append(cellDateStr)
+            self.calendarObj.saveSelectedDay(cellDateStr)
     
         } else {
             
