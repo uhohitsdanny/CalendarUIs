@@ -93,7 +93,6 @@
 		CE58D0D7201BBBC100C03246 = {
 			isa = PBXGroup;
 			children = (
-				CE58D0F720228E3100C03246 /* Resources */,
 				CE58D0E2201BBBC100C03246 /* PootCal */,
 				CE58D0E1201BBBC100C03246 /* Products */,
 				84EB95AFC10D9CBC9FF88284 /* Pods */,
@@ -122,6 +121,7 @@
 		CE58D0F720228E3100C03246 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE58D0E3201BBBC100C03246 /* AppDelegate.swift */,
 				CE58D0EA201BBBC200C03246 /* Assets.xcassets */,
 				7CFB9BE72032994100BBD748 /* UIColors+inits.swift */,
 				CE58D0FA20228E8300C03246 /* UIColors+Custom.swift */,
@@ -143,7 +143,7 @@
 				7CFB9BE92032CC0900BBD748 /* Model */,
 				7CFB9BE5203269C400BBD748 /* View */,
 				7CFB9BE620326BA900BBD748 /* View Controller */,
-				CE58D0E3201BBBC100C03246 /* AppDelegate.swift */,
+				CE58D0F720228E3100C03246 /* Resources */,
 			);
 			path = CAL;
 			sourceTree = "<group>";
