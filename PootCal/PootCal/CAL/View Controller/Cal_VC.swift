@@ -14,8 +14,8 @@ class Cal_VC: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     
+    let monthyearObj = Cal_View()
     let calendarObj = CalendarDates()
-    
     let formatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -144,7 +144,7 @@ extension Cal_VC {
     }
     
     func handlePendingCells(cell: JTAppleCell?, cellState: CellState){
-        guard let validCell = cell as? DateCell else {  return  }
+        //guard let validCell = cell as? DateCell else {  return  }
         
     }
 }

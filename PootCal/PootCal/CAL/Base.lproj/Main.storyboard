@@ -37,7 +37,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlV-MF-utZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlV-MF-utZ" userLabel="Year">
                                         <rect key="frame" x="56.5" y="32" width="33" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="yx1-Nf-t9h"/>
@@ -206,8 +206,8 @@
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="v8g-mc-vam" id="PIz-6P-TK4"/>
-                        <outlet property="monthLabel" destination="E5m-ix-HUw" id="amu-TD-OZt"/>
-                        <outlet property="yearLabel" destination="YlV-MF-utZ" id="xyE-uW-dLU"/>
+                        <outlet property="monthLabel" destination="E5m-ix-HUw" id="hVE-yO-m4g"/>
+                        <outlet property="yearLabel" destination="YlV-MF-utZ" id="Od2-dn-5Wk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
