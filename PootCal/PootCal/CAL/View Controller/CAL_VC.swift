@@ -9,13 +9,21 @@
 import UIKit
 import JTAppleCalendar
 
-class Cal_VC: UIViewController {
+
+protocol CAL_VC_PAR {
+    var sts:CAL_DISPLAY { get }
+}
+
+class CAL_VC: UIViewController, CAL_VC_PAR {
+    
+    var cal_sts:CAL_DISPLAY = .selecting
+    var sts: CAL_DISPLAY {  return self.cal_sts }
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     
-    private var calendarObj = CalendarDates()
+    var calendarObj = CAL_MC(CAL_DISPLAY.selecting)
     let formatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -25,7 +33,7 @@ class Cal_VC: UIViewController {
     }
 }
 
-extension Cal_VC: JTAppleCalendarViewDataSource {
+extension CAL_VC: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
@@ -41,7 +49,7 @@ extension Cal_VC: JTAppleCalendarViewDataSource {
     }
 }
 
-extension Cal_VC: JTAppleCalendarViewDelegate {
+extension CAL_VC: JTAppleCalendarViewDelegate {
     //  *   Displays the cell    *
     
     //Protocols for JTAppleCalendar
@@ -72,7 +80,7 @@ extension Cal_VC: JTAppleCalendarViewDelegate {
     }
 }
 
-extension Cal_VC {
+extension CAL_VC {
     
     //  *   Setup Functions *
     
@@ -98,21 +106,12 @@ extension Cal_VC {
     }
     
     func setupCellNotations(cell: JTAppleCell?, cellState: CellState) {
-        guard let validCell = cell as? DateCell else {  return  }
-        self.formatter.dateFormat = "yyyy MM dd"
-        
-        let todaysDateStr = formatter.string(from: Date())
-        let cellDateStr = formatter.string(from: cellState.date)
- 
-        if cellState.isSelected && cellDateStr >= todaysDateStr {
-            
-            validCell.selectedView.isHidden = false
-            self.calendarObj.saveSelectedDay(cellDateStr)
-    
-        } else {
-            
-            validCell.selectedView.isHidden = true
-            
+        if cal_sts == .selecting {
+            print("SELECTING STS")
+            setupForSelecting(cell: cell, cellState: cellState)
+        }
+        else if cal_sts == .display_sts {
+            print("DISPLAY STS")
         }
     }
     
@@ -145,6 +144,36 @@ extension Cal_VC {
     func handlePendingCells(cell: JTAppleCell?, cellState: CellState){
         //guard let validCell = cell as? DateCell else {  return  }
         
+    }
+}
+
+extension CAL_VC {
+    func setupForSelecting(cell: JTAppleCell?, cellState: CellState){
+        guard let validCell = cell as? DateCell else {  return  }
+        self.formatter.dateFormat = "yyyy MM dd"
+        
+        let todaysDateStr = formatter.string(from: Date())
+        let cellDateStr = formatter.string(from: cellState.date)
+        
+        // only allow selection from current date and after
+        if cellState.isSelected && cellDateStr >= todaysDateStr {
+            
+            validCell.selectedView.isHidden = false
+            self.calendarObj.saveSelectedDay(cellDateStr)
+            print("\(calendarObj.getSelectedDays()![0])")
+            
+        } else {
+            
+            validCell.selectedView.isHidden = true
+            
+        }
+    }
+    
+    func setupForDisplay(cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? DateCell else { return }
+        self.formatter.dateFormat = "yyyy MM dd"
+        let cellDateStr = formatter.string(from: cellState.date)
+        //if cellDateStr is in calendarObj.
     }
 }
 

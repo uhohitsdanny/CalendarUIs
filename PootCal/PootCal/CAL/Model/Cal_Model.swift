@@ -8,18 +8,37 @@
 
 import Foundation
 
-class CalendarDates {
+var cal_MV: CAL_VC? = nil
+
+protocol CAL_MC_PAR {
+    var sts:CAL_DISPLAY { get }
+}
+
+class CAL_MC: CAL_MC_PAR {
     
-    private var datesSelected: [String]?
+    private var cSts: CAL_DISPLAY?
+    private var datesSelected: [String] = [String()]
     private var datesPending: [String]?
     
-    var datesToBeProcessed: [String]? {
-        get {
-            return datesSelected
-        }
+    init(_ cSts:CAL_DISPLAY) {
+        self.cSts = cSts
+    }
+    
+    var sts: CAL_DISPLAY {
+        return self.cSts!
     }
     
     func saveSelectedDay(_ selectedday: String) {
-        datesSelected?.append(selectedday)
+        self.datesSelected.append(selectedday)
     }
+    
+    func getSelectedDays() -> [String]? {
+        return self.datesSelected
+    }
+}
+
+extension CAL_MC {
+    
+    //
+    
 }

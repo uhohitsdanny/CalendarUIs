@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2A9DE4F68084F3BAEEE01530 /* Pods_PootCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35345FA72307FD6264A9D2E /* Pods_PootCal.framework */; };
+		305157CF2037839D0061BA0F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157CE2037839D0061BA0F /* Globals.swift */; };
+		305157D2203786E90061BA0F /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305157D1203786E90061BA0F /* test.storyboard */; };
+		305157D4203787750061BA0F /* test_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157D3203787750061BA0F /* test_ViewController.swift */; };
 		7CFB9BE82032994100BBD748 /* UIColors+inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB9BE72032994100BBD748 /* UIColors+inits.swift */; };
 		7CFB9BED2032CC5000BBD748 /* Cal_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB9BEC2032CC5000BBD748 /* Cal_Model.swift */; };
 		CE58D0E4201BBBC100C03246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0E3201BBBC100C03246 /* AppDelegate.swift */; };
-		CE58D0E6201BBBC100C03246 /* Cal_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0E5201BBBC100C03246 /* Cal_VC.swift */; };
-		CE58D0E9201BBBC200C03246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58D0E7201BBBC200C03246 /* Main.storyboard */; };
+		CE58D0E6201BBBC100C03246 /* CAL_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0E5201BBBC100C03246 /* CAL_VC.swift */; };
+		CE58D0E9201BBBC200C03246 /* CAL_VC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58D0E7201BBBC200C03246 /* CAL_VC.storyboard */; };
 		CE58D0EB201BBBC200C03246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58D0EA201BBBC200C03246 /* Assets.xcassets */; };
 		CE58D0EE201BBBC200C03246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58D0EC201BBBC200C03246 /* LaunchScreen.storyboard */; };
 		CE58D0F6201BBF1000C03246 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D0F5201BBF1000C03246 /* DateCell.swift */; };
@@ -20,14 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305157CE2037839D0061BA0F /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		305157D1203786E90061BA0F /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		305157D3203787750061BA0F /* test_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_ViewController.swift; sourceTree = "<group>"; };
 		6CA9AAD045F29490DF8CC187 /* Pods-PootCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PootCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PootCal/Pods-PootCal.debug.xcconfig"; sourceTree = "<group>"; };
 		7CFB9BE72032994100BBD748 /* UIColors+inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+inits.swift"; sourceTree = "<group>"; };
 		7CFB9BEC2032CC5000BBD748 /* Cal_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cal_Model.swift; sourceTree = "<group>"; };
 		C02268CBE1F58BC3C0538730 /* Pods-PootCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PootCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-PootCal/Pods-PootCal.release.xcconfig"; sourceTree = "<group>"; };
 		CE58D0E0201BBBC100C03246 /* PootCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PootCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE58D0E3201BBBC100C03246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE58D0E5201BBBC100C03246 /* Cal_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cal_VC.swift; sourceTree = "<group>"; };
-		CE58D0E8201BBBC200C03246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE58D0E5201BBBC100C03246 /* CAL_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAL_VC.swift; sourceTree = "<group>"; };
+		CE58D0E8201BBBC200C03246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CAL_VC.storyboard; sourceTree = "<group>"; };
 		CE58D0EA201BBBC200C03246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE58D0ED201BBBC200C03246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE58D0EF201BBBC200C03246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,11 +54,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305157D0203786BE0061BA0F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				305157D1203786E90061BA0F /* test.storyboard */,
+				305157D3203787750061BA0F /* test_ViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		7CFB9BE5203269C400BBD748 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CE58D0F5201BBF1000C03246 /* DateCell.swift */,
-				CE58D0E7201BBBC200C03246 /* Main.storyboard */,
+				CE58D0E7201BBBC200C03246 /* CAL_VC.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,7 +75,7 @@
 		7CFB9BE620326BA900BBD748 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE58D0E5201BBBC100C03246 /* Cal_VC.swift */,
+				CE58D0E5201BBBC100C03246 /* CAL_VC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -125,6 +140,7 @@
 				CE58D0EA201BBBC200C03246 /* Assets.xcassets */,
 				7CFB9BE72032994100BBD748 /* UIColors+inits.swift */,
 				CE58D0FA20228E8300C03246 /* UIColors+Custom.swift */,
+				305157CE2037839D0061BA0F /* Globals.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,6 +156,7 @@
 		CE58D0F920228E5E00C03246 /* CAL */ = {
 			isa = PBXGroup;
 			children = (
+				305157D0203786BE0061BA0F /* Test */,
 				7CFB9BE92032CC0900BBD748 /* Model */,
 				7CFB9BE5203269C400BBD748 /* View */,
 				7CFB9BE620326BA900BBD748 /* View Controller */,
@@ -213,7 +230,8 @@
 			files = (
 				CE58D0EE201BBBC200C03246 /* LaunchScreen.storyboard in Resources */,
 				CE58D0EB201BBBC200C03246 /* Assets.xcassets in Resources */,
-				CE58D0E9201BBBC200C03246 /* Main.storyboard in Resources */,
+				305157D2203786E90061BA0F /* test.storyboard in Resources */,
+				CE58D0E9201BBBC200C03246 /* CAL_VC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE58D0E6201BBBC100C03246 /* Cal_VC.swift in Sources */,
+				CE58D0E6201BBBC100C03246 /* CAL_VC.swift in Sources */,
 				CE58D0F6201BBF1000C03246 /* DateCell.swift in Sources */,
 				7CFB9BED2032CC5000BBD748 /* Cal_Model.swift in Sources */,
 				CE58D0FB20228E8300C03246 /* UIColors+Custom.swift in Sources */,
 				7CFB9BE82032994100BBD748 /* UIColors+inits.swift in Sources */,
+				305157D4203787750061BA0F /* test_ViewController.swift in Sources */,
+				305157CF2037839D0061BA0F /* Globals.swift in Sources */,
 				CE58D0E4201BBBC100C03246 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,12 +310,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE58D0E7201BBBC200C03246 /* Main.storyboard */ = {
+		CE58D0E7201BBBC200C03246 /* CAL_VC.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE58D0E8201BBBC200C03246 /* Base */,
 			);
-			name = Main.storyboard;
+			name = CAL_VC.storyboard;
 			sourceTree = "<group>";
 		};
 		CE58D0EC201BBBC200C03246 /* LaunchScreen.storyboard */ = {
