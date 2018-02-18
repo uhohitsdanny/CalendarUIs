@@ -17,11 +17,13 @@ protocol CAL_MC_PAR {
 class CAL_MC: CAL_MC_PAR {
     
     private var cSts: CAL_DISPLAY?
-    private var datesSelected: [String] = [String()]
-    private var datesPending: [String]?
+    private var datesSelected: [String]
+    private var datesPending: [String]
     
     init(_ cSts:CAL_DISPLAY) {
         self.cSts = cSts
+        self.datesSelected = []
+        self.datesPending = ["2018 02 18", "2018 02 19", "2018 02 20"]
     }
     
     var sts: CAL_DISPLAY {
@@ -32,8 +34,8 @@ class CAL_MC: CAL_MC_PAR {
         self.datesSelected.append(selectedday)
     }
     
-    func getSelectedDays() -> [String]? {
-        return self.datesSelected
+    func getPendingDays() -> [String] {
+        return self.datesPending
     }
 }
 

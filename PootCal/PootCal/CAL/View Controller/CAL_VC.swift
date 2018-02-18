@@ -107,11 +107,10 @@ extension CAL_VC {
     
     func setupCellNotations(cell: JTAppleCell?, cellState: CellState) {
         if cal_sts == .selecting {
-            print("SELECTING STS")
             setupForSelecting(cell: cell, cellState: cellState)
         }
         else if cal_sts == .display_sts {
-            print("DISPLAY STS")
+            setupForDisplay(cell: cell, cellState: cellState)
         }
     }
     
@@ -160,7 +159,6 @@ extension CAL_VC {
             
             validCell.selectedView.isHidden = false
             self.calendarObj.saveSelectedDay(cellDateStr)
-            print("\(calendarObj.getSelectedDays()![0])")
             
         } else {
             
@@ -173,7 +171,13 @@ extension CAL_VC {
         guard let validCell = cell as? DateCell else { return }
         self.formatter.dateFormat = "yyyy MM dd"
         let cellDateStr = formatter.string(from: cellState.date)
-        //if cellDateStr is in calendarObj.
+        
+        let pendingDates: [String] = calendarObj.getPendingDays()
+        if pendingDates.contains(cellDateStr) {
+            validCell.statusView.isHidden = false
+        } else {
+            validCell.statusView.isHidden = true
+        }
     }
 }
 
