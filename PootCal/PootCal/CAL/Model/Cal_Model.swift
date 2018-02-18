@@ -29,6 +29,11 @@ class CAL_MC: CAL_MC_PAR {
     var sts: CAL_DISPLAY {
         return self.cSts!
     }
+
+}
+
+//****************************
+extension CAL_MC {
     
     func saveSelectedDay(_ selectedday: String) {
         self.datesSelected.append(selectedday)
@@ -37,10 +42,8 @@ class CAL_MC: CAL_MC_PAR {
     func getPendingDays() -> [String] {
         return self.datesPending
     }
-}
-
-extension CAL_MC {
     
-    //
-    
+    func processSelectedDates() {
+        // database queries and requests
+    }
 }
