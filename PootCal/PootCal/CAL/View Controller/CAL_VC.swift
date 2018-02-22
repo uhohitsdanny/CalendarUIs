@@ -63,7 +63,6 @@ extension CAL_VC: JTAppleCalendarViewDelegate {
         setupCellNotations(cell: cell, cellState: cellState)
         handleCellTextColor(cell: cell, cellState: cellState)
         handleCellCurrentDate(cell: cell, cellState: cellState)
-        handlePendingCells(cell: cell, cellState: cellState)
         
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
         return cell
@@ -95,6 +94,7 @@ extension CAL_VC {
             self.setupMonthAndYear(from: visibleDates)
         }
     }
+    // Sets up the Month and Year label according to current time and locale
     func setupMonthAndYear(from visibleDates: DateSegmentInfo){
         let date = visibleDates.monthDates.first!.date
         //format year and month
@@ -104,6 +104,9 @@ extension CAL_VC {
         self.formatter.dateFormat = "MMMM"
         self.monthLabel.text = self.formatter.string(from: date)
     }
+
+    // Handle the type of cell notations used depending on whether
+    // the Calendar module is being called for Selecting or Displaying statuses
     
     func setupCellNotations(cell: JTAppleCell?, cellState: CellState) {
         if cal_sts == .selecting {
@@ -113,6 +116,9 @@ extension CAL_VC {
             setupForDisplay(cell: cell, cellState: cellState)
         }
     }
+    
+    // Grabs today's date sets up the border in the date cell
+    // corresponding to the current date.
     
     func handleCellCurrentDate(cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? DateCell else {  return  }
@@ -131,6 +137,9 @@ extension CAL_VC {
         
     }
     
+    // Handles the cell text color for in and out dates and the dates
+    // that belong to current month in display
+    
     func handleCellTextColor(cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? DateCell else {  return  }
         if cellState.dateBelongsTo != .thisMonth {
@@ -138,11 +147,6 @@ extension CAL_VC {
         } else {
             validCell.dateLabel.textColor = UIColor.black
         }
-    }
-    
-    func handlePendingCells(cell: JTAppleCell?, cellState: CellState){
-        //guard let validCell = cell as? DateCell else {  return  }
-        
     }
 }
 
@@ -155,20 +159,19 @@ extension CAL_VC {
         let cellDateStr = formatter.string(from: cellState.date)
         
         // only allow selection from current date and after
-        if cellState.isSelected && cellDateStr >= todaysDateStr {
-            
+        // and dates that are not in and out dates
+        if cellState.isSelected && cellDateStr >= todaysDateStr && cellState.dateBelongsTo == .thisMonth
+        {
             validCell.selectedView.isHidden = false
             self.calendarObj.saveSelectedDay(cellDateStr)
-            
         }
-        else if !cellState.isSelected && !calendarObj.getSelectedDays().isEmpty {
+        else if !cellState.isSelected && !calendarObj.getSelectedDays().isEmpty && cellState.dateBelongsTo == .thisMonth
+        {
             self.calendarObj.removeDeselectedDay(cellDateStr)
             validCell.selectedView.isHidden = true
         }
         else {
-            
             validCell.selectedView.isHidden = true
-            
         }
     }
     
