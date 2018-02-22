@@ -10,9 +10,11 @@ import UIKit
 
 class DateInfo_VC: UIViewController {
 
+    @IBOutlet weak var popupView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view = popupView!
         // Do any additional setup after loading the view.
     }
 }

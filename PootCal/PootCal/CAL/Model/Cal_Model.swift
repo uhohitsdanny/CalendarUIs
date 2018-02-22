@@ -23,7 +23,7 @@ class CAL_MC: CAL_MC_PAR {
     init(_ cSts:CAL_DISPLAY) {
         self.cSts = cSts
         self.datesSelected = []
-        self.datesPending = ["2018 02 18", "2018 02 19", "2018 02 20"]
+        self.datesPending = ["2018 02 26", "2018 02 27", "2018 02 28"]
     }
     
     var sts: CAL_DISPLAY {
