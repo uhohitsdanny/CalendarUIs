@@ -155,7 +155,7 @@ extension CAL_VC {
             // Segue to DateInfo ViewController as a popup view
             //
             let sb = UIStoryboard(name: "CAL_VC", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DateInfo")
+            let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_VC
             self.addChildViewController(vc)
             vc.view.frame = self.view.frame
             self.view.addSubview(vc.view)

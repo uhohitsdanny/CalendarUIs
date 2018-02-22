@@ -14,7 +14,8 @@ class DateInfo_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = popupView!
+        //self.view = popupView!
         // Do any additional setup after loading the view.
     }
+    
 }
