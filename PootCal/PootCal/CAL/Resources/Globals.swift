@@ -14,3 +14,8 @@ enum CAL_DISPLAY: Int {
     case selecting      = 0
     case display_sts
 }
+
+enum Status: Int {
+    case selected       = 0
+    case deselected
+}

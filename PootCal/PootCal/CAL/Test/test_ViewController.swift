@@ -14,7 +14,7 @@ class test_ViewController: UIViewController {
         
         let sb = UIStoryboard(name: "CAL_VC", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CAL_VC") as! CAL_VC
-        vc.cal_sts = .display_sts
+        vc.cal_sts = .selecting
         //vc.preferredContentSize = CGSize(width: 343, height: 411.5)
         self.present(vc, animated: true, completion: nil)
     }

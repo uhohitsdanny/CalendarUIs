@@ -160,7 +160,12 @@ extension CAL_VC {
             validCell.selectedView.isHidden = false
             self.calendarObj.saveSelectedDay(cellDateStr)
             
-        } else {
+        }
+        else if !cellState.isSelected && !calendarObj.getSelectedDays().isEmpty {
+            self.calendarObj.removeDeselectedDay(cellDateStr)
+            validCell.selectedView.isHidden = true
+        }
+        else {
             
             validCell.selectedView.isHidden = true
             

@@ -39,8 +39,17 @@ extension CAL_MC {
         self.datesSelected.append(selectedday)
     }
     
+    func removeDeselectedDay(_ deselectedday: String) {
+        let index = self.datesSelected.index(of: deselectedday)
+        self.datesSelected.remove(at: index!)
+    }
+    
     func getPendingDays() -> [String] {
         return self.datesPending
+    }
+    
+    func getSelectedDays() -> [String] {
+        return self.datesSelected
     }
     
     func processSelectedDates() {
