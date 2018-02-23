@@ -9,8 +9,8 @@
 import UIKit
 
 class DateInfo_VC: UIViewController {
-
-    @IBOutlet weak var popupView: UIView?
+    
+    @IBOutlet weak var outerView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +18,10 @@ class DateInfo_VC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view == outerView {
+            self.view.removeFromSuperview()
+        }
+    }
 }

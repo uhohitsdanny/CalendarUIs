@@ -312,7 +312,7 @@
                         <viewLayoutGuide key="safeArea" id="dHK-61-XOj"/>
                     </view>
                     <connections>
-                        <outlet property="popupView" destination="kV4-YS-AMg" id="0i8-dD-icD"/>
+                        <outlet property="outerView" destination="3j3-ic-yPg" id="tSd-US-8MC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agy-hn-Gfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
