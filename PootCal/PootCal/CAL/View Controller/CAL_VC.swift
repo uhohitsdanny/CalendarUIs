@@ -156,6 +156,9 @@ extension CAL_VC {
             //
             let sb = UIStoryboard(name: "CAL_VC", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_VC
+            vc.dSts = .pending
+            vc.cdate = cellDateStr
+            
             self.addChildViewController(vc)
             vc.view.frame = self.view.frame
             self.view.addSubview(vc.view)

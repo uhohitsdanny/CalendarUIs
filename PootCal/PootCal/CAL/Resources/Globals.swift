@@ -18,4 +18,7 @@ enum CAL_DISPLAY: Int {
 enum Status: Int {
     case selected       = 0
     case deselected
+    case pending
+    case unavailable
+    case confirmed
 }
