@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 class DateInfo_VC: UIViewController {
     
     @IBOutlet weak var outerView: UIView?
     
+    // Google Map Location Manager
+    
+    // Google Maps parameters
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view = popupView!
         // Do any additional setup after loading the view.
+        // Google Map Camera and Marker setup
+        let camera = GMSCameraPosition.camera(withLatitude: <#T##CLLocationDegrees#>, longitude: <#T##CLLocationDegrees#>, zoom: <#T##Float#>)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
