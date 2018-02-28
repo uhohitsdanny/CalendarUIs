@@ -23,7 +23,7 @@ class CAL_MC: CAL_MC_PAR {
     init(_ cSts:CAL_DISPLAY) {
         self.cSts = cSts
         self.datesSelected = []
-        self.datesPending = ["2018 02 26", "2018 02 27", "2018 02 28"]
+        self.datesPending = ["2018 02 27", "2018 02 28"]
     }
     
     var sts: CAL_DISPLAY {
@@ -41,7 +41,9 @@ extension CAL_MC {
     
     func removeDeselectedDay(_ deselectedday: String) {
         let index = self.datesSelected.index(of: deselectedday)
-        self.datesSelected.remove(at: index!)
+        if index != nil {
+            self.datesSelected.remove(at: index!)
+        }
     }
     
     func getPendingDays() -> [String] {
