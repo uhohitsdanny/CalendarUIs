@@ -12,7 +12,7 @@ import JTAppleCalendar
 //
 // These functions help handle some details for the setup.
 //
-extension CAL_VC {
+extension CAL_MV {
     
     //
     // Grabs today's date sets up the border in the date cell

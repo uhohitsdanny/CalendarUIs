@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DateInfo_Model {
+class DateInfo_MC {
     
     private var sts: Status
     private var date: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-var cal_MV: CAL_VC? = nil
+var cal_MV: CAL_MV? = nil
 
 protocol CAL_MC_PAR {
     var sts:CAL_DISPLAY { get }
@@ -32,7 +32,8 @@ class CAL_MC: CAL_MC_PAR {
 
 }
 
-//****************************
+//*****************************
+// Functions for SELECTING mode
 extension CAL_MC {
     
     func saveSelectedDay(_ selectedday: String) {
@@ -46,15 +47,25 @@ extension CAL_MC {
         }
     }
     
-    func getPendingDays() -> [String] {
-        return self.datesPending
-    }
-    
     func getSelectedDays() -> [String] {
         return self.datesSelected
     }
     
     func processSelectedDates() {
-        // database queries and requests
+        // Will send the selected days to the matchmaking algorithm
+        // and interact with the database
+        // TO DO: pass data to the matchmaking algorithm
     }
+}
+
+//****************************
+// Functions for DISPLAYING STATUS mode
+extension CAL_MC {
+    
+    func getPendingDays() -> [String] {
+        // Will query the database for pending days
+        // TO DO: create requests to the database
+        return self.datesPending
+    }
+    
 }

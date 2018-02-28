@@ -10,10 +10,15 @@ import Foundation
 
 // Determines the intended use of the calendar
 // Calendar module will display different views depending on the display request
+
+// MARK: Displaying Types
+
 enum CAL_DISPLAY: Int {
     case selecting      = 0
     case display_sts
 }
+
+// MARK: Status Types
 
 enum Status: Int {
     case selected       = 0
@@ -22,3 +27,5 @@ enum Status: Int {
     case unavailable
     case confirmed
 }
+
+// Data Persistent Variables

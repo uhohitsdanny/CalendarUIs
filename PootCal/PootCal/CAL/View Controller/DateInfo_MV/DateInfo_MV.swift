@@ -15,7 +15,15 @@ protocol DateInfoPar {
     var date: String { get }
 }
 
-class DateInfo_VC: UIViewController, CLLocationManagerDelegate, DateInfoPar {
+protocol DateInfo_API {
+    func mSetup()
+}
+
+//
+// The DateInfo View Controller controls the view for displaying statuses on dates
+// Status: Confirmed | Pending | Unavailable
+//
+class DateInfo_MV: UIViewController, CLLocationManagerDelegate, DateInfoPar {
     
     // Protocol Parameters
     var dSts: Status?
@@ -30,7 +38,7 @@ class DateInfo_VC: UIViewController, CLLocationManagerDelegate, DateInfoPar {
     // Status color
     var stsColor: UIColor?
     
-    //Outlets
+    // View Objs
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var stsNotationLabel: UIView!
     @IBOutlet weak var stsLabel: UILabel!
@@ -45,9 +53,31 @@ class DateInfo_VC: UIViewController, CLLocationManagerDelegate, DateInfoPar {
     var gmv: GMSMapView? = nil
 
     override func viewWillAppear(_ animated: Bool) {
+        mSetup()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
+    }
+    
+    //
+    // Dismisses popupview when user touches the area outside the popup view
+    //
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view == outerView {
+            self.view.removeFromSuperview()
+            self.location_manager.stopUpdatingLocation()
+        }
+    }
+}
+
+extension DateInfo_MV: DateInfo_API {
+    func mSetup() {
         // DateInfo Obj
-        let dateInfoObj = DateInfo_Model(sts, date)
+        let dateInfoObj = DateInfo_MC(sts, date)
         setupView(diObj: dateInfoObj)
         
         // Google Map Camera and Marker setup
@@ -64,27 +94,12 @@ class DateInfo_VC: UIViewController, CLLocationManagerDelegate, DateInfoPar {
         gmv!.isMyLocationEnabled = true
         
         gmvNib!.addSubview(gmv!)
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-       
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch? = touches.first
-        if touch?.view == outerView {
-            self.view.removeFromSuperview()
-            self.location_manager.stopUpdatingLocation()
-        }
     }
 }
 
-extension DateInfo_VC {
-    func setupView(diObj: DateInfo_Model) {
+
+extension DateInfo_MV {
+    func setupView(diObj: DateInfo_MC) {
         self.stsLabel.text = diObj.getSts()
         self.dateLabel.text = diObj.getDate()
     }

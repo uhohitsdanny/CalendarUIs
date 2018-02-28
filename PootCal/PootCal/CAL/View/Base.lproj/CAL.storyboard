@@ -20,7 +20,7 @@
         <!--Ib Calendar Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CAL_VC" id="BYZ-38-t0r" customClass="CAL_VC" customModule="PootCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CAL_MV" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CAL_MV" customModule="PootCal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="130.88455772113943"/>
         </scene>
-        <!--Date InfoVC-->
+        <!--Date InfoMV-->
         <scene sceneID="0Ff-02-i4K">
             <objects>
-                <viewController storyboardIdentifier="DateInfo" id="hG6-HY-bFL" customClass="DateInfo_VC" customModule="PootCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DateInfo" id="hG6-HY-bFL" customClass="DateInfo_MV" customModule="PootCal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3j3-ic-yPg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,7 +8,7 @@
 
 import JTAppleCalendar
 
-extension CAL_VC {
+extension CAL_MV {
     
     //  *   Setup Functions *
     func setupCalendar() {
@@ -86,8 +86,8 @@ extension CAL_VC {
             //
             // Segue to DateInfo ViewController as a popup view
             //
-            let sb = UIStoryboard(name: "CAL_VC", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_VC
+            let sb = UIStoryboard(name: "CAL", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_MV
             vc.dSts = .pending
             vc.cdate = cellDateStr
             

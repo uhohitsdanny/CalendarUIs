@@ -18,7 +18,13 @@ protocol CAL_VC_API {
     func mSetup()
 }
 
-class CAL_VC: UIViewController, CAL_VC_PAR {
+//
+// CAL_VC View Controller controls the type of Calendar mode to display
+// Modes: Selecting | Displaying Status
+//
+// CAL_VC View Controller can also invoke the DateInfo_VC View Controller
+//
+class CAL_MV: UIViewController, CAL_VC_PAR {
     
     var cal_sts:CAL_DISPLAY = .selecting
     var sts: CAL_DISPLAY {  return self.cal_sts }
@@ -41,7 +47,7 @@ class CAL_VC: UIViewController, CAL_VC_PAR {
     }
 }
 
-extension CAL_VC: JTAppleCalendarViewDataSource {
+extension CAL_MV: JTAppleCalendarViewDataSource {
     
     // Date Source protocols for JTAppleCalendar
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
@@ -58,7 +64,7 @@ extension CAL_VC: JTAppleCalendarViewDataSource {
     }
 }
 
-extension CAL_VC: JTAppleCalendarViewDelegate {
+extension CAL_MV: JTAppleCalendarViewDelegate {
     
     //  *   Displays the cell in the calendar   *
     // Protocols for JTAppleCalendarView Delegate
@@ -99,7 +105,7 @@ extension CAL_VC: JTAppleCalendarViewDelegate {
     }
 }
 
-extension CAL_VC: CAL_VC_API {
+extension CAL_MV: CAL_VC_API {
     func mSetup() {
         setupCalendar()
     }
