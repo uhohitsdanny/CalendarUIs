@@ -100,8 +100,21 @@ extension DateInfo_MV: DateInfo_API {
 
 extension DateInfo_MV {
     func setupView(diObj: DateInfo_MC) {
-        self.stsLabel.text = diObj.getSts()
+        self.stsNotationLabel.backgroundColor = getStsColor(sts: diObj.getSts())
+        self.stsLabel.text = diObj.getStsStr()
         self.dateLabel.text = diObj.getDate()
+    }
+    
+    func getStsColor(sts: Status) -> UIColor {
+        switch sts
+        {
+            case .pending:
+                return UIColor.NotificationColors.pending
+            case .unavailable:
+                return UIColor.NotificationColors.unavailable
+            default:
+                return UIColor.NotificationColors.pending
+        }
     }
 }
 

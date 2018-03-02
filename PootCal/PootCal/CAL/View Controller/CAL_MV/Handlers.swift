@@ -50,16 +50,39 @@ extension CAL_MV {
     //
     // Handles pending cell's notation on the calendar (yellow dot)
     //
-    func handlePendingCells(cell: DateCell, cellState: CellState) {
+    func handleStsOfCells(cell: DateCell, cellState: CellState) {
         self.formatter.dateFormat = "yyyy MM dd"
         let cellDateStr = formatter.string(from: cellState.date)
         let pendingDates: [String] = calendarObj.getPendingDays()
+        let unavailDates: [String] = calendarObj.getUnavailableDays()
         
         if pendingDates.contains(cellDateStr) {
             cell.statusView.isHidden = false
+            cell.statusView.backgroundColor = UIColor.NotificationColors.pending
+        }
+        else if unavailDates.contains(cellDateStr){
+            cell.statusView.isHidden = false
+            cell.statusView.backgroundColor = UIColor.NotificationColors.unavailable
         } else {
             cell.statusView.isHidden = true
         }
+    }
+    
+    func handleSegue(sts: Status, date: String) -> Void {
+        //
+        // Segue to DateInfo ViewController as a popup view
+        //
+        let sb = UIStoryboard(name: "CAL", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_MV
+        
+        // Get the status of the date and the date itself
+        vc.dSts = sts
+        vc.cdate = date
+        
+        self.addChildViewController(vc)
+        vc.view.frame = self.view.frame
+        self.view.addSubview(vc.view)
+        vc.didMove(toParentViewController: self)
     }
     
 }

@@ -298,7 +298,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGz-FR-KeU">
-                                                <rect key="frame" x="111" y="31" width="72" height="24"/>
+                                                <rect key="frame" x="87" y="31" width="120" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="ukk-O6-xur"/>
                                                 </constraints>
@@ -315,7 +315,7 @@
                                             <constraint firstItem="Hl1-F3-6LP" firstAttribute="top" secondItem="pGz-FR-KeU" secondAttribute="bottom" constant="7" id="DCZ-JC-Ggr"/>
                                             <constraint firstItem="bol-DV-IdC" firstAttribute="top" secondItem="AU1-cI-wdU" secondAttribute="bottom" constant="33" id="F9x-5R-aNg"/>
                                             <constraint firstItem="91y-36-nQV" firstAttribute="top" secondItem="ZSA-zd-uJV" secondAttribute="bottom" constant="29" id="GIH-yG-VNZ"/>
-                                            <constraint firstItem="pGz-FR-KeU" firstAttribute="leading" secondItem="erW-LO-kVm" secondAttribute="trailing" constant="47" id="GZc-Aa-emp"/>
+                                            <constraint firstItem="pGz-FR-KeU" firstAttribute="leading" secondItem="erW-LO-kVm" secondAttribute="trailing" constant="23" id="GZc-Aa-emp"/>
                                             <constraint firstItem="ZSA-zd-uJV" firstAttribute="centerX" secondItem="MRP-KZ-M8Q" secondAttribute="centerX" id="K3c-q6-rc3"/>
                                             <constraint firstItem="Hl1-F3-6LP" firstAttribute="centerX" secondItem="MRP-KZ-M8Q" secondAttribute="centerX" id="MFH-dM-5pz"/>
                                             <constraint firstAttribute="trailing" secondItem="bol-DV-IdC" secondAttribute="trailing" id="MQK-iO-3us"/>

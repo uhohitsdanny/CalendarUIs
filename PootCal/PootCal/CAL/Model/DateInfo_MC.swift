@@ -18,7 +18,11 @@ class DateInfo_MC {
         self.date = date
     }
     
-    func getSts() -> String {
+    func getSts() -> Status {
+        return self.sts
+    }
+    
+    func getStsStr() -> String {
         switch self.sts {
         case .pending:
             return "Pending"

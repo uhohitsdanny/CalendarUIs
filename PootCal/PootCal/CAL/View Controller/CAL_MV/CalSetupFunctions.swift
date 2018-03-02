@@ -76,26 +76,19 @@ extension CAL_MV {
     func setupForDisplay(cell: JTAppleCell?, cellState: CellState) {
         
         guard let validCell = cell as? DateCell else { return }
-        handlePendingCells(cell: validCell, cellState: cellState)
+        handleStsOfCells(cell: validCell, cellState: cellState)
         self.formatter.dateFormat = "yyyy MM dd"
         let cellDateStr = formatter.string(from: cellState.date)
         let pendingDates: [String] = calendarObj.getPendingDays()
+        let unavailDates: [String] = calendarObj.getUnavailableDays()
         
         if validCell.isSelected && pendingDates.contains(cellDateStr) && cellState.dateBelongsTo == .thisMonth
         {
-            //
-            // Segue to DateInfo ViewController as a popup view
-            //
-            let sb = UIStoryboard(name: "CAL", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DateInfo") as! DateInfo_MV
-            vc.dSts = .pending
-            vc.cdate = cellDateStr
-            
-            self.addChildViewController(vc)
-            vc.view.frame = self.view.frame
-            self.view.addSubview(vc.view)
-            vc.didMove(toParentViewController: self)
+            handleSegue(sts: .pending, date: cellDateStr)
         }
-        
+        else if validCell.isSelected && unavailDates.contains(cellDateStr) && cellState.dateBelongsTo == .thisMonth
+        {
+            handleSegue(sts: .unavailable, date: cellDateStr)
+        }
     }
 }

@@ -19,11 +19,13 @@ class CAL_MC: CAL_MC_PAR {
     private var cSts: CAL_DISPLAY?
     private var datesSelected: [String]
     private var datesPending: [String]
+    private var unavailableDates: [String]
     
     init(_ cSts:CAL_DISPLAY) {
         self.cSts = cSts
         self.datesSelected = []
-        self.datesPending = ["2018 02 27", "2018 02 28"]
+        self.datesPending = ["2018 03 27", "2018 03 28"]
+        self.unavailableDates = ["2018 03 17", "2018 03 18"]
     }
     
     var sts: CAL_DISPLAY {
@@ -68,4 +70,7 @@ extension CAL_MC {
         return self.datesPending
     }
     
+    func getUnavailableDays() -> [String] {
+        return self.unavailableDates
+    }
 }
